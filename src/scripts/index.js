@@ -1,3 +1,12 @@
-import '../styles/index.scss';
+let o = {
+  carId: 123,
+  getId: function() {
+    return this.carId;
+  }
+};
 
-console.log('webpack starterkit');
+let newCar = { carId: 456};
+
+let newFn = o.getId.bind(newCar);
+
+console.log(newFn());
