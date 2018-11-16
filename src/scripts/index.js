@@ -1,16 +1,7 @@
-//Arrow function do not have their own "this" value.
-// "this" refers to the enclosing context
-
-let getId = (prefix, suffix) => {
-  return prefix + 123 + suffix;
+let trackCar = function(carId, city='NY') {
+  console.log(`Tracking ${carId} in ${city}.`);
 };
 
-console.log(getId('ID: ', '!'));
+console.log(trackCar(123));
 
-let getId2 = (prefix, suffix) => prefix + 123 + suffix;
-
-console.log(getId2('ID: ', '!'));
-
-let getId3 = _ => 123; //You can change if you want () to _ is a convention
-
-console.log(getId3());
+console.log(trackCar(123, 'Chicago'));
